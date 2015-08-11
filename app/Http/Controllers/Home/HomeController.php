@@ -21,6 +21,6 @@ class HomeController extends Controller {
                         'test' => 'it works!'
                       ]);
 
-    return \View::make('home.index', array('name' => 'world'));
+    return \View::make('index', array('name' => 'world'));
   }
 }
