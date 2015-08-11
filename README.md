@@ -10,5 +10,6 @@
     # Set up JS, start dev server
     cd resources/assets
     npm install
+    cd ../..
     node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d --port 9090
     # Open localhost:8000
