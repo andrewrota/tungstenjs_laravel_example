@@ -13,3 +13,10 @@
     cd ../..
     node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d --port 9090
     # Open localhost:8000
+
+## Relevant files
+
+* `config/javascript.php`
+* `app/Http/Controllers/Home/HomeController.php`
+* `resources/views/layouts/master.blade.php`
+* `resources/views/todo_app_view.mustache`
