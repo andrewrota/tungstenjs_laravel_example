@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\View;
 
 
 /**
@@ -20,6 +21,6 @@ class HomeController extends Controller {
                         'test' => 'it works!'
                       ]);
 
-    return view('welcome');
+    return \View::make('home.index', array('name' => 'world'));
   }
 }
