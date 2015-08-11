@@ -20,3 +20,4 @@
 * `app/Http/Controllers/Home/HomeController.php`
 * `resources/views/layouts/master.blade.php`
 * `resources/views/todo_app_view.mustache`
+* `resources/assets/javascript` (entire directory)
