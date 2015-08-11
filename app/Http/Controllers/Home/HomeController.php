@@ -15,8 +15,8 @@ class HomeController extends Controller {
   public function index() {
     $data = [
       'todoItems' => [['title' => 'give talk at Boston PHP']],
-      'todoCount' => 2,
-      'todoCountPlural' => true
+      'todoCount' => 1,
+      'todoCountPlural' => false
     ];
     \JavaScript::put($data);
 
