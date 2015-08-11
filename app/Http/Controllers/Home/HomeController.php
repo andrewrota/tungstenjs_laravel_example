@@ -2,25 +2,24 @@
 
 namespace App\Http\Controllers\Home;
 
+
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\View;
 
 
 /**
- * Class FrontendController
+ * Class HomeController
  * @package App\Http\Controllers
  */
 class HomeController extends Controller {
 
-  /**
-   * @return \Illuminate\View\View
-   */
-  public function index()
-  {
-    \JavaScript::put([
-                        'test' => 'it works!'
-                      ]);
+  public function index() {
+    $data = [
+      'todoItems' => [['title' => 'give talk at Boston PHP']],
+      'todoCount' => 2,
+      'todoCountPlural' => true
+    ];
+    \JavaScript::put($data);
 
-    return \View::make('index', array('name' => 'world'));
+    return view('layouts.master', $data);
   }
 }

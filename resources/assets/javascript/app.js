@@ -4,5 +4,5 @@ var template = require('../../views/todo_app_view.mustache');
 module.exports = new AppView({
   el: '#appwrapper',
   template: template,
-  model: new AppModel()
+  model: new AppModel(window.data)
 });
