@@ -6,7 +6,7 @@
     <link rel="stylesheet" charset="UTF-8" href="index.css">
 </head>
 <body>
-<div id="appwrapper">@include('todo_app_view')</div>
+{!! $todo_app !!}
 @include('footer')
 </body>
 </html>

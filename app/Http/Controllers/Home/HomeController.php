@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
-
+use App\Providers\TungstenServiceProvider;
 use App\Http\Controllers\Controller;
 
 
@@ -18,15 +18,28 @@ class HomeController extends Controller {
      * data is in controller just to bootstrap data for demo app
      */
     $data = [
-      'todoItems' => [['title' => 'give talk at Boston PHP']],
+      'todoItems' => [
+        ['title' => 'write basic laravel example', 'completed' => true],
+        ['title' => 'create factory bootstrapper', 'completed' => true],
+        ['title' => 'give talk at Boston PHP']
+      ],
       'todoCount' => 1,
-      'todoCountPlural' => false
+      'todoCountPlural' => false,
+      'completedItems' => true
     ];
 
-    // Add data as JS variable.
-    \JavaScript::put($data);
+    $main_view = \View::make('layouts.master');
+
+    \TungstenBootstrapper::register(
+      $main_view,
+      'todo_app',
+      'todo_app_view',
+      $data,
+      'AppView',
+      'AppModel'
+    );
 
     // Render view with same data.  Shared data!
-    return view('layouts.master', $data);
+    return $main_view;
   }
 }
